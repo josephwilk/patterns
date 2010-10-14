@@ -1,0 +1,161 @@
+h1. Cucumber October 2010 pattern workshop notes.
+
+h2. Problems
+
+Login/logout/signup
+- every single app.
+
+Integration testing:
+- How to prioritise
+- Less important than unit tests?
+- Are exhaustive tests pointless?
+
+How to avoid overhead
+- Initial "wiring up"
+- Cucumber: Not opinionated enough?
+- Where to start.
+
+How to avoid refactoring your code and tests simultaneously.
+- Or upgrading/extending/improving
+
+Taking over an existing mess
+
+Adopt Cucumber when the customer proxy is not involved in the process: Good or bad?
+
+Team structure
+
+Proxy owner?
+- Business people not reading / caring about features
+
+How to test I18nized interface geolocation etc.
+
+Organise by page/controller
+- Where does stuff go?
+
+How to test "graceful degradation" cross-platform stuff
+
+How to get designers to write Cukes
+
+Runtime overhead of running all tests
+
+Cucumber  + Selenium + wire frames + fake data
+
+Internal vs External Client (Friction)
+
+Javascript
+
+Unwilling/unable to write features (Stakeholders)
+
+Abstraction is a barrier
+
+Greater accessibility
+- wiki, Gdocs, Word docs etc.
+
+h2. Ideas
+
+Find similar steps to modify for new functionality
+Search to find exiting steps so you don't add new ones.
+- Outcomes / Resulting context
+  - identification of duplication + unused code.
+  - remove or dry them up
+- Rationale
+  - Express steps in context not as regexp
+  - maintainability by exposing duplication + wastage
+
+What should I see
+
+Adding integration tests exposes rot in legacy systems
+- grind through it.
+
+Readability is king.
+
+Cuking against production as monitoring
+
+Screenshots / wireframes into cukes.
+
+Shared language between features in different projects
+
+Create videos of a Cucumber run, adding captions of each scenario line
+- For product owners
+
+No regexp in main scope
+
+Invest in factories
+
+Inside out tests
+
+? Factory loops
+
+? Automating steps
+
+Be systematic and use small steps.
+
+Tagging steps that can be thrown away
+
+Use different profiles to run step defs one set of features with multiple step def folders
+
+Tagging Scenarios as @gui for imperative end-to-end tests
+
+Paring helps with naming
+
+Fake out the UI platform to test output.
+
+Cucumber + Selenium + write frames
+
+Should be in plain English
+
+Context
+- Background for tests
+
+Cucumber should not allow itself to be used badly easily
+- Libraries of reusable steps
+
+Perspective
+- Who? User, Admin, OS
+
+Justification of time spent on learning how to talk in cucumber way with the client.
+
+Scenarios are too tightly coupled to implementation
+- Push towards declarative style
+
+Team worth with business to generate features (workshops)
+
+Workshops with business asking difficult questions from devs/ testers
+
+Acceptance Tests != Integration Tests.
+
+Don't add new steps!
+
+Features map naturally to user stories.
+
+Linked Scenarios via contract
+ - Optional background steps
+
+Less implementation in plain text
+
+Cuke compiling to speed up runtime
+
+Divide test into layers
+- Business concepts
+- Workflows
+- Fine grain
+
+Write the features anyway
+- regardless of execution context (hard/scared of setup)
+- agreement
+- diverge from code base
+- User stories can be written by product owners and business people.
+- Developers convert these to Cucumber syntax, but relationship to story should be obvious.
+
+Editor for Cucumber (cuke-inspector?)
+  - Browser for step defs
+  - Business like
+  - Visual representation of features
+  - Linking between steps and scenarios
+  - Command line tool
+  - Editor plugin
+  - Collects steps from live run of features
+  - Code inspection of steps (metric_fu) to show similarity.
+
+Problems:
+* Getting involved with an already existing project thats using Cucumber
