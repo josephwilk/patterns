@@ -1,6 +1,20 @@
 h1. Cucumber October 2010 pattern workshop notes.
 
-h2. Problems
+h2. Brainstorming
+
+h3. Problems
+
+How do you decide on language for features to match copy on site.
+
+Organise around classes, methods - smells like unit tests?
+
+Should cukes cover bug fixes?
+
+How do you avoid plain-text unit tests?
+
+1st feature on legacy system = 3 days
+
+Data generation is a problem because of dependencies.
 
 Login/logout/signup
 - every single app.
@@ -51,7 +65,17 @@ Abstraction is a barrier
 Greater accessibility
 - wiki, Gdocs, Word docs etc.
 
-h2. Ideas
+h3. Ideas
+
+Refactor to reduce duplicate steps and keep language consistent
+
+Tags annotations from conversations with users/devs
+
+Tag by ticket number (bugs)
+
+Never auto generate cukes!
+
+Factory girl helps generate contexts
 
 Find similar steps to modify for new functionality
 Search to find exiting steps so you don't add new ones.
@@ -146,6 +170,10 @@ Write the features anyway
 - diverge from code base
 - User stories can be written by product owners and business people.
 - Developers convert these to Cucumber syntax, but relationship to story should be obvious.
+
+h3. Other
+
+Maintenance
 
 Editor for Cucumber (cuke-inspector?)
   - Browser for step defs
