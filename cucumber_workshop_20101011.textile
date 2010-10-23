@@ -171,6 +171,18 @@ Write the features anyway
 - User stories can be written by product owners and business people.
 - Developers convert these to Cucumber syntax, but relationship to story should be obvious.
 
+Try to keep your tests loosely coupled.
+
+Be more declarative, less imperative
+
+Test your basic core functionality first.
+
+Start with the biggest basic checks
+
+Whenever you find a problem write a test to catch it next time.
+
+Remeber: Even simple tests can test a lot of your stack.
+
 h3. Other
 
 Maintenance
@@ -187,3 +199,51 @@ Editor for Cucumber (cuke-inspector?)
 
 Problems:
 * Getting involved with an already existing project thats using Cucumber
+
+h2. Pattern ideas
+--
+Organise your files using tags, these should map back directly to user stories
+--
+Alias: Readability, plain text, clarity, friendliness.
+Author: alex<at>last.fm
+Solution: write your step to avoid code. step:
+* Hide logic/switch statements in your definitions
+If you can't say it aloud, rewrite it
+
+Features should express themselves from a users point of view
+
+Don't be afraid to hide complex step in a higher level alias.
+Do the non-technical people around you understand your features
+Make your tests matter - DRY, reuse your earlier steps
+ 
+Problem: How do you keep your patterns reachable? How do you avoid code in your feature
+
+--
+Alias: The problem not the solution
+Solution: Be more declarative + less imperative
+Problem: Thinking of the solution rather than the problem
+Context: Already started coding.
+Forces: Coders want to code
+Side effects: 
+ * Miss some ideas for solutions
+ * Be more creative
+Rationale: Can lead to better/different solutions
+Known issues:
+ * Can limit solutions
+ * Tests may not be flexible
+Avoid Problem: Get people to write steps themselves. 
+Environment: Too focused on solutions at the outset
+Avoid Problem: Get people to write steps themselves
+--
+Alias: Tagging References
+Context: Stories are frequently written by product owners and business people in their domain language and are frequently stored in external systems, e.g. Pivotal Tracker, Taskboard.
+Solution: Developers convert the stories into Cucumber syntax but tag these with references to the identifiers of the external story cards.
+Side Effects: There may be a lot that is 'lost in translation' when the developer interprets the domain language.
+Known uses: Unboxed consulting use Pivotal tracker ides in some projects as tags.
+--
+Aliases: Common behaviours
+Context: Multiple apps/projects with common behaviours such as login / logout.
+Shared domain concepts
+Forces: Not DRY = costly. Copy/Paste => Bitrot.
+Problem: No way of making libraries of higher level steps.
+? Solution: Business - level steps. 
