@@ -142,7 +142,7 @@ Justification of time spent on learning how to talk in cucumber way with the cli
 Scenarios are too tightly coupled to implementation
 - Push towards declarative style
 
-Team worth with business to generate features (workshops)
+Team work with business to generate features (workshops)
 
 Workshops with business asking difficult questions from devs/ testers
 
